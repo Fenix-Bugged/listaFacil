@@ -1,0 +1,13 @@
+header {
+  background: linear-gradient(#2c124e, #471d7d);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+header img {
+  width: 5rem;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
