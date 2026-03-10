@@ -1,8 +1,18 @@
 <section id="tareas">
   <header>
     <h2>Tareas de {{ nombre }}</h2>
+    <menu>
+      <p class="button">
+      <button>Añadir Tarea</button>
+      </p>
+    </menu>
   </header>
 
   <ul>
-    </ul>
+    @for (tarea of tareasSeleccionadas; track tarea.id) {
+      <li>
+        <app-tarea [tarea]="tarea" />
+      </li>
+    }
+  </ul>
 </section>

@@ -1,6 +1,4 @@
-<div>
-  <button (click)="alSeleccionarUsuario()">
-    <img [src]="rutaImagen" [alt]="nombre" />
-    <span>{{ nombre }}</span>
-  </button>
-</div>
+<button (click)="alSeleccionarUsuario()">
+  <img [src]="rutaAvatar" [alt]="usuario.nombre" />
+  <span>{{ usuario.nombre }}</span>
+</button>

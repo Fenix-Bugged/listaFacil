@@ -16,26 +16,30 @@ main {
   overflow: auto;
 }
 
-#textoCondicional {
+.textoCondicional {
   font-weight: bold;
   font-size: 1.15rem;
   margin: 0;
   text-align: center;
 }
 
-/* Para pantallas grandes (como en tu imagen) */
+
 @media (min-width: 768px) {
   main {
     margin: 4rem auto;
-    grid-template-columns: 1fr 3fr; /* Columna pequeña para usuarios, grande para tareas */
+    grid-template-columns: 1fr 3fr;
   }
 
   #usuarios {
     flex-direction: column;
   }
 
-  #textoCondicional {
-    font-size: 1.5rem;
-    text-align: left;
-  }
+#fallback {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.5rem; /* Tamaño más grande */
+  font-weight: bold; /* Para que se vea grueso como en la imagen */
+  color: #c4afde;    /* El color lila claro de la captura */
+  font-family: 'Inter', sans-serif; /* O la fuente que esté usando tu proyecto */
+}
 }
