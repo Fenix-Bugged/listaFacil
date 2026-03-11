@@ -13,14 +13,17 @@ import { Tareas } from './componentes/tareas/tareas';
 })
 export class AppComponent {
   usuarios = USUARIOS_FALSOS;
+
   idUsuarioSeleccionado?: string;
 
 
   get usuarioSeleccionado() {
-    return this.usuarios.find((u) => u.id === this.idUsuarioSeleccionado)!;
+    return this.usuarios.find((u) => u.id === this.idUsuarioSeleccionado);
   }
+
 
   alSeleccionarUsuario(id: string) {
     this.idUsuarioSeleccionado = id;
+    console.log('Usuario seleccionado con ID:', id);
   }
 }

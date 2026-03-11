@@ -36,6 +36,13 @@ export class Tareas {
       resumen: 'RESUMEN',
       fechaLimite: 'TIEMPO',
     },
+     {
+      id: 't3',
+      idUsuario: 'u3',
+      titulo: 'TITULO TAREA',
+      resumen: 'RESUMEN',
+      fechaLimite: 'TIEMPO',
+    },
     {
       id: 't4',
       idUsuario: 'u4',
