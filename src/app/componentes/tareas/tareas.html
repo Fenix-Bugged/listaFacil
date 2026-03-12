@@ -1,17 +1,19 @@
+@if (estaAnadiendoTarea) {
+  <app-nueva-tarea (cancelar)="alCerrarAnadirTarea()" />
+}
+
 <section id="tareas">
   <header>
     <h2>Tareas de {{ nombre }}</h2>
     <menu>
-      <p class="button">
-      <button>Añadir Tarea</button>
-      </p>
+      <button (click)="alEmpezarAnadirTarea()">Añadir Tarea</button>
     </menu>
   </header>
 
   <ul>
     @for (tarea of tareasSeleccionadas; track tarea.id) {
       <li>
-        <app-tarea [tarea]="tarea" />
+        <app-tarea [tarea]="tarea" (completar)="alCompletarTarea($event)"/>
       </li>
     }
   </ul>

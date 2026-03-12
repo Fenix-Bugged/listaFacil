@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tarea',
@@ -15,4 +15,8 @@ export class Tarea {
     resumen: string;
     fechaLimite: string;
   };
+  @Output() completar = new EventEmitter <string>();
+  alFinalizarTarea(){
+    this.completar.emit(this.tarea.id);
+  }
 }
